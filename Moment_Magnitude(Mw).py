@@ -91,9 +91,6 @@ def process_sac_file():
     fig.update_layout(title='Log-Log Displacement Spectrum with Fc and C0', showlegend=True)
     fig.show()
 
-    # Read the SAC file
-    st = read('Integrated_SAC/integrated_1997.02.04-10.37.37.ALN.1.sac', format='SAC')
-
     # Access the SAC header and extract the hypocentral distance (R)
     header = st[0].stats.sac
     hypocentral_distance_meters = header.dist  # Hypocentral distance in meters
